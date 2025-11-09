@@ -7,7 +7,7 @@ interface DirectorInterface {
 interface TeacherInterface {
     workFromHome(): string;
     getCoffeeBreak(): string;
-    workDirectorTasks(): string;
+    workTeacherTasks(): string;
 }
 
 class Directory implements DirectorInterface {
@@ -18,7 +18,7 @@ class Directory implements DirectorInterface {
         return 'Getting a coffee break';
     }
     workDirectorTasks(): string {
-        return 'Working on director tasks';
+        return 'Getting to director tasks';
     }
 }
 
@@ -29,8 +29,8 @@ class Teacher implements TeacherInterface {
     getCoffeeBreak(): string {
         return 'Cannot have a break';
     }
-    workDirectorTasks(): string {
-        return 'Working on teacher tasks';
+    workTeacherTasks(): string {
+        return 'Getting to work';
     }
 }
 
