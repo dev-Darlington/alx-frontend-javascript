@@ -26,23 +26,27 @@ interface printTeacherFunction {
     (firstName: string, lastName: string): string;
 }
 
-interface StudentClass {
+interface StudentClassConstructor {
     firstName: string;
     lastName: string;
     workOnHomework(): string;
     displayName(): string;
 }
 
-const StudentClass: StudentClass = {
-    firstName: 'John',
-    lastName: 'Doe',
+class StudentClass {
+    firstName: string;
+    lastName: string;
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
     workOnHomework(): string {
         return 'Currently working';
-    },
+    }
     displayName(): string {
         return this.firstName;
     }
-};
+}
 
 
 // class StudentClass implements StudentClass {
