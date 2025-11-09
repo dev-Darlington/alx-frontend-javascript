@@ -32,17 +32,30 @@ interface StudentClass {
     workOnHomework(): string;
     displayName(): string;
 }
-class StudentClass implements StudentClass {
-    firstName: string;
-    lastName: string;
-    constructor(firstName: string, lastName: string) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+
+const StudentClass: StudentClass = {
+    firstName: 'John',
+    lastName: 'Doe',
     workOnHomework(): string {
         return 'Currently working';
-    }
+    },
     displayName(): string {
         return this.firstName;
     }
-}
+};
+
+
+// class StudentClass implements StudentClass {
+//     firstName: string;
+//     lastName: string;
+//     constructor(firstName: string, lastName: string) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+//     workOnHomework(): string {
+//         return 'Currently working';
+//     }
+//     displayName(): string {
+//         return this.firstName;
+//     }
+// }
