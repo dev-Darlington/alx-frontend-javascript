@@ -15,6 +15,8 @@ interface Directors extends Teacher {
     numberOfReports: number;
 }
 
-function printTeacher(firstName: string, lastName: string): string {
-    return `${firstName.charAt(0)}. ${lastName}`;
+function printTeacher(firstName:string, lastName:string): string {
+    this.firstName = firstName.charAt(0).toUpperCase()
+    this.lastName = lastName;
+    return `${firstName}. ${lastName}`;
 }
