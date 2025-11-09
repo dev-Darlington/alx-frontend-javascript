@@ -18,7 +18,7 @@ interface Directors extends Teacher {
 function printTeacher(firstName:string, lastName:string): string {
     this.firstName = firstName.charAt(0).toUpperCase()
     this.lastName = lastName;
-    console.log({firstName, lastName})
+    console.log({ firstName, lastName })
     return `${firstName}. ${lastName}`;
 }
 
