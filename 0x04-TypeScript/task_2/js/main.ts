@@ -10,7 +10,7 @@ interface TeacherInterface {
     workTeacherTasks(): string;
 }
 
-class Directory implements DirectorInterface {
+class Director implements DirectorInterface {
     workFromHome(): string {
         return 'Working from home';
     }
@@ -40,7 +40,7 @@ function createEmployee(salary: number | string): DirectorInterface | TeacherInt
             return new Teacher();
         }
         else {
-            return new Directory();
+            return new Director();
         }
     }
 }
