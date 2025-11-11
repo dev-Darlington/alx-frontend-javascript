@@ -44,3 +44,13 @@ function createEmployee(salary: number | string): DirectorInterface | TeacherInt
         }
     }
 }
+
+const Subjects: string[] = ['Math', 'History'];
+
+function teachClass(todayClass: string): string {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    } else if (todayClass === 'History') {
+        return 'Teaching History';
+    }
+}
