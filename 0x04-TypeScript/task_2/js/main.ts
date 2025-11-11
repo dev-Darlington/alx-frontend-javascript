@@ -45,9 +45,9 @@ function createEmployee(salary: number | string): DirectorInterface | TeacherInt
     }
 }
 
-const Subjects: string[] = ['Math', 'History'];
+type Subjects = string;
 
-function teachClass(todayClass: string): string {
+function teachClass(todayClass: Subjects): string {
     if (todayClass === 'Math') {
         return 'Teaching Math';
     } else if (todayClass === 'History') {
