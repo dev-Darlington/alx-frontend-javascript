@@ -9,10 +9,9 @@ const row: RowElement = {
     lastName: "Salva",
 }
 
-const newRowID: RowID = CRUD.insertRow(1, row);
+const newRowID: RowID = CRUD.insertRow(row);
 const updatedRow: RowElement = {
-    firstName: "Guillaume",
-    lastName: "Salva",
+    ...row,
     age: 23,
 }
 CRUD.updateRow(newRowID, updatedRow);
