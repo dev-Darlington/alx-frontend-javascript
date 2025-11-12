@@ -1,0 +1,20 @@
+//triple slash directive to include all the dependencies from crud.d.ts
+/// <reference path="./crud.d.ts" />
+
+import { RowID, RowElement } from "./interface";
+import * as CRUD from "./crud";
+
+const row: RowElement = {
+    firstName: "Guillaume",
+    lastName: "Salva",
+}
+
+const newRowID: RowID = CRUD.insertRow(1, row);
+const updatedRow: RowElement = {
+    firstName: "Guillaume",
+    lastName: "Salva",
+    age: 23,
+}
+CRUD.updateRow(newRowID, updatedRow);
+CRUD.deleteRow(newRowID);
+
